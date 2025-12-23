@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #020617, #020024);
+  color: #e5e7eb;
+  padding: 30px;
+}
+
+/* Background glow */
+.bg-blur {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background: #3b82f6;
+  filter: blur(200px);
+  top: 10%;
+  left: 60%;
+  z-index: -1;
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 30px;
+  margin-bottom: 40px;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.navbar a {
+  color: #e5e7eb;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #60a5fa;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 70px 30px;
+}
+
+.hero h1 span {
+  color: #60a5fa;
+}
+
+.hero-buttons {
+  margin-top: 25px;
+}
+
+.btn {
+  padding: 12px 26px;
+  border-radius: 30px;
+  background: #3b82f6;
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn.outline {
+  background: transparent;
+  border: 1px solid #3b82f6;
+}
+
+/* Sections */
+.section {
+  margin-top: 40px;
+  padding: 40px;
+}
+
+.section h2 {
+  margin-bottom: 15px;
+  color: #93c5fd;
+}
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.skill-card {
+  padding: 25px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.3s ease;
+}
+
+.skill-card h3 {
+  color: #60a5fa;
+  margin-bottom: 10px;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(59,130,246,0.25);
+}
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.project-card {
+  padding: 28px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.3s ease;
+}
+
+.project-card h3 {
+  color: #93c5fd;
+  margin-bottom: 12px;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(59,130,246,0.25);
+}
+
+/* Tech tags */
+.tech {
+  margin: 15px 0;
+}
+
+.tech span {
+  display: inline-block;
+  background: rgba(59,130,246,0.2);
+  color: #bfdbfe;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  margin: 4px 6px 0 0;
+}
+
+/* Project buttons */
+.project-links {
+  margin-top: 18px;
+}
+
+.btn.small {
+  padding: 8px 18px;
+  font-size: 0.85rem;
+}
+/* Experience */
+.experience-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.experience-card {
+  padding: 28px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.3s ease;
+}
+
+.experience-card h3 {
+  color: #60a5fa;
+  margin-bottom: 6px;
+}
+
+.experience-card span {
+  font-size: 0.85rem;
+  color: #cbd5f5;
+}
+
+.experience-card p {
+  margin-top: 12px;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 45px rgba(59,130,246,0.22);
+}
+/* Contact */
+.contact {
+  text-align: center;
+}
+
+.contact p {
+  margin-top: 8px;
+  color: #cbd5f5;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.contact-card {
+  padding: 14px 28px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #e5e7eb;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: scale(1.08);
+  background: rgba(59,130,246,0.2);
+  box-shadow: 0 18px 40px rgba(59,130,246,0.25);
+}
