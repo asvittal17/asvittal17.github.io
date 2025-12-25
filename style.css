@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+/* ---------------- RESET ---------------- */
 * {
   margin: 0;
   padding: 0;
@@ -7,14 +8,19 @@
   font-family: 'Poppins', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-height: 100vh;
   background: linear-gradient(135deg, #020617, #020024);
   color: #e5e7eb;
   padding: 30px;
+  overflow-x: hidden;
 }
 
-/* Background glow */
+/* ---------------- BACKGROUND GLOW ---------------- */
 .bg-blur {
   position: fixed;
   width: 400px;
@@ -26,7 +32,7 @@ body {
   z-index: -1;
 }
 
-/* Glass effect */
+/* ---------------- GLASS ---------------- */
 .glass {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(14px);
@@ -35,7 +41,7 @@ body {
   box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
-/* Navbar */
+/* ---------------- NAVBAR ---------------- */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -48,6 +54,7 @@ body {
   display: flex;
   gap: 25px;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 .navbar a {
@@ -60,28 +67,43 @@ body {
   color: #60a5fa;
 }
 
-/* Hero */
+/* ---------------- HERO ---------------- */
 .hero {
   text-align: center;
   padding: 70px 30px;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
 }
 
 .hero h1 span {
   color: #60a5fa;
 }
 
-.hero-buttons {
-  margin-top: 25px;
+.hero p {
+  margin-top: 10px;
+  font-size: 1.05rem;
+  color: #cbd5f5;
 }
 
+.hero-buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ---------------- BUTTONS ---------------- */
 .btn {
   padding: 12px 26px;
   border-radius: 30px;
   background: #3b82f6;
   color: white;
   text-decoration: none;
-  margin: 0 10px;
   transition: 0.3s;
+  display: inline-block;
 }
 
 .btn:hover {
@@ -93,7 +115,12 @@ body {
   border: 1px solid #3b82f6;
 }
 
-/* Sections */
+.btn.small {
+  padding: 8px 18px;
+  font-size: 0.85rem;
+}
+
+/* ---------------- SECTIONS ---------------- */
 .section {
   margin-top: 40px;
   padding: 40px;
@@ -103,7 +130,8 @@ body {
   margin-bottom: 15px;
   color: #93c5fd;
 }
-/* Skills */
+
+/* ---------------- SKILLS ---------------- */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -126,10 +154,11 @@ body {
 }
 
 .skill-card:hover {
-  transform: translateY(-8px) scale(1.03);
+  transform: translateY(-6px);
   box-shadow: 0 20px 40px rgba(59,130,246,0.25);
 }
-/* Projects */
+
+/* ---------------- PROJECTS ---------------- */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -157,11 +186,11 @@ body {
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
   box-shadow: 0 25px 50px rgba(59,130,246,0.25);
 }
 
-/* Tech tags */
+/* ---------------- TECH TAGS ---------------- */
 .tech {
   margin: 15px 0;
 }
@@ -176,19 +205,9 @@ body {
   margin: 4px 6px 0 0;
 }
 
-/* Project buttons */
-.project-links {
-  margin-top: 18px;
-}
-
-.btn.small {
-  padding: 8px 18px;
-  font-size: 0.85rem;
-}
-/* Experience */
+/* ---------------- EXPERIENCE ---------------- */
 .experience-box {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 25px;
   margin-top: 25px;
 }
@@ -204,7 +223,6 @@ body {
 
 .experience-card h3 {
   color: #60a5fa;
-  margin-bottom: 6px;
 }
 
 .experience-card span {
@@ -218,18 +236,9 @@ body {
   font-size: 0.95rem;
 }
 
-.experience-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 22px 45px rgba(59,130,246,0.22);
-}
-/* Contact */
+/* ---------------- CONTACT ---------------- */
 .contact {
   text-align: center;
-}
-
-.contact p {
-  margin-top: 8px;
-  color: #cbd5f5;
 }
 
 .contact-links {
@@ -252,14 +261,11 @@ body {
 }
 
 .contact-card:hover {
-  transform: scale(1.08);
+  transform: scale(1.06);
   background: rgba(59,130,246,0.2);
-  box-shadow: 0 18px 40px rgba(59,130,246,0.25);
 }
-html {
-  scroll-behavior: smooth;
-}
-/* Scroll animation */
+
+/* ---------------- SCROLL REVEAL ---------------- */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -269,4 +275,48 @@ html {
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ---------------- MOBILE RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+  body {
+    padding: 16px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .hero {
+    padding: 40px 16px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .section {
+    padding: 22px;
+  }
+
+  .project-card,
+  .skill-card,
+  .experience-card {
+    padding: 20px;
+  }
 }
